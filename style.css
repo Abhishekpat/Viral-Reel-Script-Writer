@@ -1,0 +1,163 @@
+:root {
+    --primary: #FF0050; /* TikTok Red/Pink */
+    --secondary: #00F2EA; /* TikTok Cyan */
+    --bg: #000000;
+    --card-bg: #121212;
+    --text: #FFFFFF;
+    --accent: #25F4EE;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #888;
+}
+
+.input-section {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #333;
+    background: #222;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    min-width: 200px;
+}
+
+input[type="text"]:focus {
+    border-color: var(--secondary);
+}
+
+button {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(45deg, var(--primary), #D60087);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#errorMessage {
+    color: var(--primary);
+    text-align: center;
+    font-weight: bold;
+    margin-top: -1rem;
+    animation: shake 0.5s;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#outputSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: slideUp 0.5s ease-out;
+}
+
+.script-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.script-card h2 {
+    color: var(--secondary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.script-card.highlight {
+    border: 1px solid var(--primary);
+    background: rgba(255, 0, 80, 0.1);
+}
+
+ul {
+    list-style-position: inside;
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: auto;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    .input-section { flex-direction: column; }
+    button { width: 100%; }
+}

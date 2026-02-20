@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Reel Script Writer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Viral Reel Script Writer 🚀</h1>
+            <p>Turn boring topics into viral gold in seconds.</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <input type="text" id="topicInput" placeholder="Enter a boring topic (e.g., 'Doing Taxes')" autocomplete="off">
+                <button id="generateBtn">Generate Script ✨</button>
+            </div>
+            
+            <div id="errorMessage" class="hidden">Please enter a topic first! 😅</div>
+
+            <div id="outputSection" class="hidden">
+                <div class="script-card">
+                    <h2>🔥 The Hook</h2>
+                    <p id="hookOutput"></p>
+                </div>
+
+                <div class="script-card">
+                    <h2>📜 The Script</h2>
+                    <div id="scriptOutput"></div>
+                </div>
+
+                <div class="script-card">
+                    <h2>📣 Call to Action</h2>
+                    <p id="ctaOutput"></p>
+                </div>
+
+                <div class="script-card">
+                    <h2>💬 On-Screen Captions</h2>
+                    <ul id="captionsOutput"></ul>
+                </div>
+
+                <div class="script-card highlight">
+                    <h2>🎵 Music Vibe</h2>
+                    <p id="musicOutput"></p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Built for the Hackathon • No Backend • Pure Magic</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
