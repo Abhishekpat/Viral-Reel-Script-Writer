@@ -20,7 +20,7 @@ A simple, instant web tool to generate 30-second viral video scripts for Shorts,
 - Vanilla JavaScript (No libraries)
 
 ## Demo
-*[Insert Demo Link Here]*
+[Live Demo Link](https://viral-script-writer-abhis-v1.netlify.app)
 
 ---
-*Built for the Hackathon. 100% Client-Side.*
+*Built for the Hackathon. 100% Client-Side. Hosted on Netlify.*
